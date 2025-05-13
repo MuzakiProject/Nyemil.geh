@@ -1,0 +1,10 @@
+
+*.php linguist-language=PHP
+
+vendor/** linguist-vendored
+node_modules/** linguist-vendored
+build/** linguist-vendored
+dist/** linguist-vendored
+public/** linguist-vendored
+storage/** linguist-vendored
+.env linguist-generated
