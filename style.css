@@ -1,0 +1,261 @@
+*{
+    font-family: "Funnel Sans", serif;
+}
+
+.navbar-brand{
+    font-family: "Playwrite AU SA", cursive;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+}
+
+.navbar-visible {
+    transition: transform 0.4s ease;
+}
+
+main{
+    margin-top: 3.92rem;
+}
+
+.divline{
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dee2e6;
+}
+
+.prof img{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+}
+
+.maincover p{
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.41);
+}
+
+.maincover a{
+    font-size: clamp(0.75rem, 2vw, 1rem);
+}
+
+.maincover h1{
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: white;
+    font-family: "Playwrite AU SA", cursive;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.41);
+}
+
+.maincover{
+    background-image: url("src/images/wallpaperflare.com_wallpaper\ 50.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.prod-cover{
+    height: 100vh;
+}
+
+.prod-cover .carousel{
+    padding: 9rem;
+}
+
+.prod-cover .right{
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.41);
+}
+
+.prod-cover .right a{
+    text-shadow: none;
+}
+
+.prod-cover .carousel-indicators button{
+    width: 15%;
+    height: 15%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.prod-cover .carousel-indicators .bg1{
+    background-image: url("src/images/basrengjeruk.png");
+    background-size: contain;
+    background-position: center;
+}
+.prod-cover .carousel-indicators .bg2{
+    background-image: url("src/images/pisangcoklat.png");
+    background-size: contain;
+    background-position: top;
+}
+.prod-cover .carousel-indicators .bg3{
+    background-image: url("src/images/singkong-prodblado.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-indicators .prev-btn,
+.carousel-indicators .next-btn {
+    width: auto;
+    height: auto;
+    text-indent: 0;
+    overflow: visible;
+    background-color: transparent;
+}
+
+.prod-card {
+    transition: transform 0.3s ease;
+}
+
+.prod-card:hover{
+    transform: scale(1.05);
+}
+
+.imgproduk{
+    width: 40vmax;
+    aspect-ratio: 4 / 3;
+}
+
+.imgproduk img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.home-main h5{
+    font-family: "Playwrite AU SA", cursive;
+    text-decoration: underline;
+    text-underline-offset: 50%;
+    margin-bottom: 2%;
+}
+
+.home-main p{
+    font-size: clamp(0.75rem, 2vw, 1.2rem);
+}
+
+.prom-cover{
+    height: 100vh;
+}
+
+.about-cover{
+    height: 100vh;
+}
+
+.maps iframe{
+    height: 60vh;
+}
+
+.store-cover .items-cover .items-img img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    object-position: center;
+    background-color: gray;
+}
+
+.store-cover h3{
+    font-family: "Playwrite AU SA", cursive;
+}
+
+.detail-cover .items-img-cover .items-img{
+    width: 40vmax;
+    aspect-ratio: 4 / 3;
+}
+
+.detail-cover .items-img-cover .items-img img{
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.detail-cover .items-cover .items-img img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    object-position: center;
+    background-color: gray;
+}
+
+.cover-help{
+    background-image: url("src/images/gradientweb.png");
+    background-size: cover;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.177);
+    padding: 5rem;
+}
+
+.payment-userc .left .img{
+    background-color: gray;
+    aspect-ratio: 4 / 3;
+    width: 15rem;
+    height: fit-content;
+}
+
+.payment-userc .left .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.brand-about .text h3{
+    font-family: "Playwrite AU SA", cursive;
+    text-decoration: underline;
+    text-underline-offset: 50%;
+    margin-bottom: 2%;
+}
+
+.brand-about .image{
+    aspect-ratio: 4 / 3;
+    height: fit-content;
+}
+
+.brand-about .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.Visi-misi .image{
+    aspect-ratio: 16 / 9;
+    height: fit-content;
+}
+
+.Visi-misi .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width : 1025px) {
+    .prod-cover .carousel{
+        padding: 8rem;
+    }
+    
+    .prod-cover .carousel-indicators button{
+        width: 25%;
+        height: 25%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+    }
+    
+    .imgproduk{
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+    
+    .imgproduk img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .home-main h6{
+        font-family: "Playwrite AU SA", cursive;
+        text-decoration: underline;
+        text-underline-offset: 50%;
+        margin-bottom: 2%;
+    }
+    
+    .about-cover img{
+        width: clamp(250px, 50vw, 45vmax);
+    }
+}

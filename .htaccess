@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /E-Commerce/
+
+RewriteRule ^beranda$ index.php [L]

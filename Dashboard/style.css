@@ -1,0 +1,47 @@
+*{
+    font-family: "Funnel Sans", serif;
+}
+
+.navbar-brand{
+    font-family: "Playwrite AU SA", cursive;
+}
+
+main{
+    padding-top: 5rem;
+}
+
+.sidebar {
+padding-top: 5rem;
+width: 250px;
+height: 100vh; /* Set tinggi 100% viewport height */
+top: 0;
+}
+
+.sidebar i{
+    width: 1.5rem;
+}
+
+.contindex {
+flex: 1;
+}
+
+.dash-main i{
+    font-size: 1.25rem;
+}
+
+.oapu th, .oapu td{
+    padding-left: 2rem;
+    padding-right: -2rem;
+}
+
+.oapu .imgp-dash{
+    background-color: gray;
+    aspect-ratio: 4 / 3;
+    width: 10rem;
+}
+
+.oapu .imgp-dash img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
