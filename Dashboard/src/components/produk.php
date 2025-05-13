@@ -77,8 +77,12 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Harga Produk:</label>
+                    <label for="exampleFormControlInput1" class="form-label">Berat:</label>
                     <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Harga Produk:</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder=""  step="0.01" min="0" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Stok:</label>
@@ -94,18 +98,36 @@
 </div>
 <div class="modal fade" id="detproduk" tabindex="-1" aria-labelledby="detproduk" aria-hidden="true">
     <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="detproduk">Detail Produk</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="detproduk">Detail Produk</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex">
+                    <div class="left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="right">
+                        <h1></h1>
+                        <p class="stok"></p>
+                        <div class="berat">
+                            <select class="form-select" aria-label="Berat">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <p class="harga"></p>
+                        <div class="deskripsi"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger">Save changes</button>
+            </div>
         </div>
-        <div class="modal-body">
-          ...
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
