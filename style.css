@@ -2,6 +2,13 @@
     font-family: "Funnel Sans", serif;
 }
 
+
+.form-check-input:checked {
+  background-color: #dc3545;; /* biru Bootstrap */
+  border-color: #dc3545;;
+}
+
+
 .navbar-brand{
     font-family: "Playwrite AU SA", cursive;
 }
@@ -223,6 +230,36 @@ main{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.profile-cover .left .profile-image{
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+}
+
+.menu-profile .card-body .middle .order-img{
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+}
+
+.menu-profile .not-items-found .notfound-img{
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+}
+
+.cart-cover .left .card-body .cart-items-img{
+    width: 10rem;
+    aspect-ratio: 1 / 1;
+}
+
+.cover-order-det .left .image-detpes{
+    width: 10rem;
+    aspect-ratio: 1 / 1;
+}
+
+.cover-order-det .right .image-detpes{
+    width: 6rem;
+    aspect-ratio: 1 / 1;
 }
 
 @media (max-width : 1025px) {

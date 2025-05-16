@@ -45,6 +45,15 @@
                         $footer = false;
                         include __DIR__ . "/src/components/paybayar.php";
                         break;
+                    case 7:
+                        include __DIR__ . "/src/components/profile.php";
+                        break;
+                    case 8:
+                        include __DIR__ . "/src/components/keranjang.php";
+                        break;
+                    case 9:
+                        include __DIR__ . "/src/components/ordetail.php";
+                        break;
                     default:
                         include __DIR__ . "/src/components/main.php";
                         break;
@@ -57,7 +66,7 @@
             if ($is_logged_in) {
                 include __DIR__ . "/src/components/headerlog.php";
             } else {
-                nav($nav);
+                include __DIR__ . "/src/components/headerlog.php";
             }
             footer($footer);
         ?>
