@@ -6,8 +6,24 @@
             </div>
         </div>
         <div class="right">
-            <h2>Nama Saya</h2>
-            <p>namasaya@exmaple.com</p>
+            <h2>
+                <?php
+                    if (isset($_SESSION['user'])) {
+                        echo ($_SESSION['user']['name']);
+                    }else{
+                        echo "Guest";
+                    }
+                ?>
+            </h2>
+            <p>
+                <?php
+                    if (isset($_SESSION['user'])) {
+                        echo ($_SESSION['user']['email']);
+                    }else{
+                        echo "guest@example.com";
+                    }
+                ?>
+            </p>
             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Info Lengkap</button>
         </div>
     </div>
@@ -265,8 +281,8 @@
             <div class="left">
                 <p>Nama</p>
                 <p>Email</p>
-                <p>Alamat</p>
                 <p>Nomor Telepon</p>
+                <p>Alamat</p>
             </div>
             <div class="middle">
                 <p>: </p>
@@ -275,10 +291,42 @@
                 <p>: </p>
             </div>
             <div class="right">
-                <p>Nama Saya</p>
-                <p>namasaya@example.com</p>
-                <p>Indonesia, Lampung, Bandar lampung, Kedaton, Mall Boemi Kedaton. 31121</p>
-                <p>083122110298</p>
+                <p>
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        echo ($_SESSION['user']['name']);
+                    }else{
+                        echo "guest";
+                    }
+                ?>
+                </p>
+                <p>
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        echo ($_SESSION['user']['email']);
+                    }else{
+                        echo "guest@example.com";
+                    }
+                ?>
+                </p>
+                <p>
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        echo ($_SESSION['user']['address']);
+                    }else{
+                        echo "-";
+                    }
+                ?>
+                </p>
+                <p>
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        echo ($_SESSION['user']['no_telp']);
+                    }else{
+                        echo "-";
+                    }
+                ?>
+                </p>
             </div>
         </div>
       </div>
