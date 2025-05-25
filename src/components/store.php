@@ -24,113 +24,27 @@
             </div>
         </div>
     </div>
+    <?php
+    $dataprdk = tampilproduk("SELECT * FROM products");
+    ?>
     <div class="items-cover">
         <div class="items-row">
             <div class="row row-cols-md-4 row-cols-2">
+                <?php foreach ($dataprdk as $data): ?>
                 <div class="col">
-                    <a class="text-decoration-none " href="?page=5">
+                    <a class="text-decoration-none " href="?page=5&id=<?= $data["id"] ?>">
                         <div class="card rounded-0 border-0">
                             <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/singkong-prod.png" alt="Gambar" />
+                                <img class="card-img-top rounded-0" src="/src/images/<?= $data["image_product"] ?>" alt="Gambar" />
                             </div>
                             <div class="card-body text-center">
-                                <h5 class=" card-title">Keripik Singkong - Original</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
+                                <h5 class=" card-title"><?= $data["productname"] ?></h5>
+                                <p class="card-text fw-light">Rp. <?= $data["price"] ?></p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col">
-                    <a class="text-decoration-none " href="http://">
-                        <div class="card rounded-0 border-0">
-                            <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/singkong-prodblado.png" alt="Gambar" />
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class=" card-title">Keripik Singkong - Balado</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none " href="http://">
-                        <div class="card rounded-0 border-0">
-                            <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/basrengjeruk.png" alt="Gambar" />
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class=" card-title">Basreng Pedas - Daun jeruk</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none " href="http://">
-                        <div class="card rounded-0 border-0">
-                            <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/basrengori.png" alt="Gambar" />
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class=" card-title">Basreng Asin - Original</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none " href="http://">
-                        <div class="card rounded-0 border-0">
-                            <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/basrengbbq.png" alt="Gambar" />
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class=" card-title">Basreng Pedas - BBQ</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none " href="http://">
-                        <div class="card rounded-0 border-0">
-                            <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/pisangori.png" alt="Gambar" />
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class=" card-title">Keripik Pisang - Original</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none " href="http://">
-                        <div class="card rounded-0 border-0">
-                            <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/pisangcoklat.png" alt="Gambar" />
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class=" card-title">Keripik Pisang - Coklat</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col">
-                    <a class="text-decoration-none " href="http://">
-                        <div class="card rounded-0 border-0">
-                            <div class="items-img d-flex justify-content-center">
-                                <img class="card-img-top rounded-0" src="/src/images/pisangmatcha.png" alt="Gambar" />
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class=" card-title">Keripik Pisang - Matcha</h5>
-                                <p class="card-text fw-light">Rp. 999,99,9</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
