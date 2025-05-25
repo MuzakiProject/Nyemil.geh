@@ -61,7 +61,6 @@ if (isset($_POST["hapus-user"])){
         foreach ($datausr as $user) : 
         ?>
         <tr>
-<<<<<<< HEAD
             <td scope="row"><?= $no ?></td>
             <td><?= $user["username"] ?></td>
             <td><?= $user["email"] ?></td>
@@ -77,21 +76,6 @@ if (isset($_POST["hapus-user"])){
         $no++;
         endforeach
         ?>
-=======
-            <td scope="row">1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>080808</td>
-        </tr>
-        <tr>
-            <td scope="row">2</td>
-            <td>Jacob</td>
-            <td>Tdornton</td>
-            <td>@fat</td>
-            <td>080808</td>
-        </tr>
->>>>>>> 0dac60e069ab6bba053d4e0dfa3992bb63bb0a04
     </tbody>
 </table>
 <?php  if($infouser) : ?>
