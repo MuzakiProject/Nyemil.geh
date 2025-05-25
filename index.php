@@ -75,6 +75,15 @@
             </div>
         </main>
         <?php
+<<<<<<< HEAD
+=======
+            $is_logged_in = isset($_SESSION['user']);
+            if ($is_logged_in) {
+                include __DIR__ . "/src/components/headerlog.php";
+            } else {
+                include __DIR__ . "/src/components/header.php";
+            }
+>>>>>>> 0dac60e069ab6bba053d4e0dfa3992bb63bb0a04
             footer($footer);
         ?>
         

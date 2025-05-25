@@ -32,6 +32,9 @@ $dataprdk = cariDanSortProduk($dat4bas3, $keyword, $sort);
             </div>
         </div>
     </div>
+    <?php
+    $dataprdk = tampilproduk("SELECT * FROM products");
+    ?>
     <div class="items-cover">
         <div class="items-row">
             <div class="row row-cols-md-4 row-cols-2">
