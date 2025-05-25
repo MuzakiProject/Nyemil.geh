@@ -16,7 +16,7 @@
     </ul>
     <ul class="nav ms-auto d-none d-lg-flex">
         <li class="nav-item">
-          <button type="button" class="btn btn-danger rounded-5 fw-medium" data-bs-toggle="modal" data-bs-target="#SignButton">Sign in</button>
+          <button type="button" class="btn btn-danger rounded-5 fw-medium" data-bs-toggle="modal" data-bs-target="#loginModal">Sign in</button>
         </li>
     </ul>
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -90,7 +90,25 @@
     </div>
   </div>
 </nav>
-<div class="modal fade" id="SignButton" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    if (loginUser($email, $password)) {
+        echo "<script>
+                alert('Login berhasil!');
+                window.location.href = 'index.php';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Login gagal! Email atau password salah.');
+              </script>";
+    }
+}
+?>
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -98,20 +116,20 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="" method="post">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
           </div>
           <div class="mb-3">
             <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+            <input type="password" name="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
             <div id="passwordHelpBlock" class="form-text">
               Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
             </div>
           </div>
           <div class="d-flex justify-content-center flex-column loginbtn w-100">
-            <input type="submit" value="Login" class="btn btn-danger w-100 mb-3"></input>
+            <button type="submit" class="btn btn-danger w-100 mb-3">Masuk</button>
           </div>
         </form>
         <div class="d-flex justify-content-center flex-column loginbtn w-100">

@@ -1,11 +1,11 @@
 function increment() {
     const input = document.getElementById("quantity");
-    input.stepUp();
-  }
+    input.value = parseInt(input.value) + 1;
+}
 
-  function decrement() {
+function decrement() {
     const input = document.getElementById("quantity");
-    if (input.value > 1) {
-      input.stepDown();
+    if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
     }
-  }
+}

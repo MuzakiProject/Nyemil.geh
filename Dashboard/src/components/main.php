@@ -1,3 +1,10 @@
+<?php 
+$totalprod = getTotalProductCount($dat4bas3); 
+$totaluser = getTotalUser($dat4bas3); 
+$totalorder = getTotalOrder($dat4bas3); 
+$totalpendapatan = getTotalPendapatan($dat4bas3); 
+$allorder = getAllOrderDetails();
+?>
 <div class="container-fluid">
 <div class="p-3">
   <h3 class="fw-bolder">E-Commerce Dashboard</h3>
@@ -14,9 +21,9 @@
                 </div>
                 <div class="customers d-flex justify-content-between mt-4">
                   <div class="left d-flex flex-column w-100">
-                    <span class="fw-light">Pelanggan</span>
+                    <span class="fw-light">Pengguna</span>
                     <div class="right d-flex justify-content-between align-items-center">
-                      <b class="fs-3">3,099</b>
+                      <b class="fs-3"><?= $totaluser; ?></b>
                       <b class="badge bg-success">90%</b>
                     </div>
                   </div>
@@ -32,7 +39,7 @@
                   <div class="left d-flex flex-column w-100">
                     <span class="fw-light">Pesanan</span>
                     <div class="right d-flex justify-content-between align-items-center">
-                      <b class="fs-3">3,099</b>
+                      <b class="fs-3"><?= $totalorder; ?></b>
                       <b class="badge bg-success">90%</b>
                     </div>
                   </div>
@@ -52,7 +59,7 @@
               <div class="left d-flex flex-column w-100">
                 <span class="fw-light">Total Pendapatan</span>
                 <div class="right d-flex justify-content-between align-items-center">
-                  <b class="fs-3">Rp 10.000.000</b>
+                  <b class="fs-3">Rp <?= $totalpendapatan; ?></b>
                   <b class="badge bg-success">90%</b>
                 </div>
               </div>
@@ -68,7 +75,7 @@
               <div class="left d-flex flex-column w-100">
                 <span class="fw-light">Produk</span>
                 <div class="right d-flex justify-content-between align-items-center">
-                  <b class="fs-3">36</b>
+                  <b class="fs-3"><?= $totalprod; ?></b>
                   <b class="badge bg-success">90%</b>
                 </div>
               </div>
@@ -78,20 +85,12 @@
       </div>
     </div>
     <div class="card-rorder card h-100 border-0 shadow-sm">
+      <div class="card-header py-3" style="background-color : white ;">
+          <span class="fw-semibold fs-5">Pesanan Terbaru</span>
+      </div>
       <div class="card-body">
-        <div class="title-dashorder d-flex justify-content-between align-items-center ps-2 pe-2">
-          <h5 class="card-title m-0 p-0 fw-semibold">Pesanan Terbaru</h5>
-          <div class="dropdown ms-auto">
-            <a href="#" class="btn btn-outline-danger icon-link ps-3 pe-3 dropdown-toggle fw-light" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-sliders me-1"></i> Filter</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item fw-light">Paling Sesuai</a></li>
-                <li><a class="dropdown-item fw-light" href="#">Harga Tertinggi</a></li>
-                <li><a class="dropdown-item fw-light" href="#">Harga Terendah</a></li>
-            </ul>
-          </div>
-        </div>
-        <table class="table mt-3">
-            <thead class="border-top">
+        <table class="table">
+            <thead>
               <tr>
                 <th scope="col">Customer</th>
                 <th scope="col">Product</th>
@@ -100,24 +99,14 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($allorder as $recent) : ?>
               <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>2</td>
-                <td>Add</td>
+                <td><?= $recent["user_name"] ?></td>
+                <td><?= $recent["productname"] ?></td>
+                <td><?= $recent["quantity"] ?></td>
+                <td><?= $recent["order_status"] ?></td>
               </tr>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>2</td>
-                <td>Add</td>
-              </tr>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>2</td>
-                <td>Add</td>
-              </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
       </div>

@@ -10,15 +10,23 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
         <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script type="text/javascript"
+        src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="SB-Mid-client-M9wHfTZ_CV_nJKf3"></script>
     </head>
     <body>
         <?php
         session_start();
-
+        require __DIR__ . "/Dashboard/src/components/phplogic/database.php";
         include __DIR__ . "/src/components/phplogic/function.php";
         
         $footer = true;
-        $nav = true;
+        $is_logged_in = isset($_SESSION['user']);
+            if ($is_logged_in) {
+                include __DIR__ . "/src/components/headerlog.php";
+            } else {
+                include __DIR__ . "/src/components/header.php";
+            }
         ?>
         
         <main class=" w-100">
@@ -42,7 +50,6 @@
                         include __DIR__ . "/src/components/detitems.php";
                         break;
                     case 6:
-                        $footer = false;
                         include __DIR__ . "/src/components/paybayar.php";
                         break;
                     case 7:
@@ -54,6 +61,12 @@
                     case 9:
                         include __DIR__ . "/src/components/ordetail.php";
                         break;
+                    case 10:
+                        include __DIR__ . "/src/components/check-cart.php";
+                        break;
+                    case 11:
+                        include __DIR__ . "/src/components/phplogic/pay-process.php";
+                        break;
                     default:
                         include __DIR__ . "/src/components/main.php";
                         break;
@@ -62,22 +75,15 @@
             </div>
         </main>
         <?php
-            $is_logged_in = isset($_SESSION['user']);
-            if ($is_logged_in) {
-                include __DIR__ . "/src/components/headerlog.php";
-            } else {
-                include __DIR__ . "/src/components/headerlog.php";
-            }
             footer($footer);
         ?>
         
         <script src="src/components/js/navanim.js"></script>
         <script src="src/components/js/counterplusmin.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             ScrollReveal().reveal('.textmain, .prod-cover, .about-cover, .prom-cover, .store-cover, .brand-about, .Visi-misi', {
                 duration: 1000,

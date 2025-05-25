@@ -21,14 +21,20 @@
             <img src="/src/images/pictmale.png" type="button" class="border rounded-circle" data-bs-toggle="dropdown" aria-expanded="false" alt="profile">
             <ul class="dropdown-menu mt-5 me-0">
               <div class="head shadow-sm">
-                <li><p class="dropdown-item align-items-center d-flex gap-2"><img src="/src/images/pictmale.png" type="button" class="border rounded-circle" data-bs-toggle="dropdown" aria-expanded="false" alt="profile"><span>Your Name</span></p></li>
+                <li><p class="dropdown-item align-items-center d-flex gap-2"><img src="/src/images/pictmale.png" type="button" class="border rounded-circle" data-bs-toggle="dropdown" aria-expanded="false" alt="profile"><span>
+                  <?php
+                    if (isset($_SESSION['user'])) {
+                        echo ($_SESSION['user']['name']);
+                    }else{
+                        echo "Guest";
+                    }
+                  ?>
+                </span></p></li>
               </div>
-              <div class="body pt-3">
-                <li><a class="dropdown-item align-items-center d-flex gap-2" href="?page=7"><i class="fa-solid fa-right-from-bracket bg-body-secondary rounded-circle p-2"></i>Akun Saya</a></li>
-                <li><a class="dropdown-item align-items-center d-flex gap-2" href="#"><i class="fa-solid fa-right-from-bracket bg-body-secondary rounded-circle p-2"></i> Another action</a></li>
-                <li><a class="dropdown-item align-items-center d-flex gap-2" href="#"><i class="fa-solid fa-right-from-bracket bg-body-secondary rounded-circle p-2"></i> Something else here</a></li>
+              <div class="body">
+                <li><a class="dropdown-item align-items-center d-flex gap-2" href="?page=7"><i class="fa-solid fa-user bg-body-secondary rounded-circle p-2"></i></i>Akun Saya</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item align-items-center d-flex gap-2" href="#"><i class="fa-solid fa-right-from-bracket bg-body-secondary rounded-circle p-2"></i> Keluar</a></li>
+                <li><a class="dropdown-item align-items-center d-flex gap-2" href="/src/components/phplogic/logout.php"><i class="fa-solid fa-right-from-bracket bg-body-secondary rounded-circle p-2"></i> Keluar</a></li>
               </div>
             </ul>
           </div>

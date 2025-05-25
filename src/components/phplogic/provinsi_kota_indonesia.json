@@ -1,0 +1,382 @@
+{
+  "Aceh": [
+    {
+      "nama": "Banda Aceh",
+      "jarak_km": 2500
+    },
+    {
+      "nama": "Lhokseumawe",
+      "jarak_km": 2300
+    },
+    {
+      "nama": "Langsa",
+      "jarak_km": 2200
+    }
+  ],
+  "Sumatera Utara": [
+    {
+      "nama": "Medan",
+      "jarak_km": 2050
+    },
+    {
+      "nama": "Binjai",
+      "jarak_km": 2060
+    },
+    {
+      "nama": "Tebing Tinggi",
+      "jarak_km": 2000
+    }
+  ],
+  "Sumatera Barat": [
+    {
+      "nama": "Padang",
+      "jarak_km": 1500
+    },
+    {
+      "nama": "Bukittinggi",
+      "jarak_km": 1550
+    },
+    {
+      "nama": "Payakumbuh",
+      "jarak_km": 1570
+    }
+  ],
+  "Riau": [
+    {
+      "nama": "Pekanbaru",
+      "jarak_km": 1350
+    },
+    {
+      "nama": "Dumai",
+      "jarak_km": 1450
+    }
+  ],
+  "Kepulauan Riau": [
+    {
+      "nama": "Tanjungpinang",
+      "jarak_km": 1000
+    },
+    {
+      "nama": "Batam",
+      "jarak_km": 980
+    }
+  ],
+  "Jambi": [
+    {
+      "nama": "Jambi",
+      "jarak_km": 850
+    },
+    {
+      "nama": "Sungai Penuh",
+      "jarak_km": 1100
+    }
+  ],
+  "Sumatera Selatan": [
+    {
+      "nama": "Palembang",
+      "jarak_km": 400
+    },
+    {
+      "nama": "Lubuklinggau",
+      "jarak_km": 700
+    },
+    {
+      "nama": "Pagar Alam",
+      "jarak_km": 650
+    }
+  ],
+  "Bengkulu": [
+    {
+      "nama": "Bengkulu",
+      "jarak_km": 900
+    }
+  ],
+  "Lampung": [
+    {
+      "nama": "Bandar Lampung",
+      "jarak_km": 0
+    },
+    {
+      "nama": "Metro",
+      "jarak_km": 35
+    },
+    {
+      "nama": "Panjang",
+      "jarak_km": 10
+    },
+    {
+      "nama": "Raja Basa Raya",
+      "jarak_km": 4.4
+    },
+    {
+      "nama": "Way halim",
+      "jarak_km": 4
+    },
+    {
+      "nama": "Sukarame",
+      "jarak_km": 5.9
+    },
+    {
+      "nama": "Pahoman",
+      "jarak_km": 9
+    },
+    {
+      "nama": "Teluk betung",
+      "jarak_km": 11
+    },
+    {
+      "nama": "Natar",
+      "jarak_km": 13
+    }
+  ],
+  "Banten": [
+    {
+      "nama": "Serang",
+      "jarak_km": 380
+    },
+    {
+      "nama": "Cilegon",
+      "jarak_km": 360
+    },
+    {
+      "nama": "Tangerang",
+      "jarak_km": 390
+    }
+  ],
+  "DKI Jakarta": [
+    {
+      "nama": "Jakarta Pusat",
+      "jarak_km": 400
+    },
+    {
+      "nama": "Jakarta Barat",
+      "jarak_km": 410
+    },
+    {
+      "nama": "Jakarta Timur",
+      "jarak_km": 420
+    },
+    {
+      "nama": "Jakarta Utara",
+      "jarak_km": 430
+    },
+    {
+      "nama": "Jakarta Selatan",
+      "jarak_km": 440
+    }
+  ],
+  "Jawa Barat": [
+    {
+      "nama": "Bandung",
+      "jarak_km": 600
+    },
+    {
+      "nama": "Bekasi",
+      "jarak_km": 470
+    },
+    {
+      "nama": "Bogor",
+      "jarak_km": 500
+    },
+    {
+      "nama": "Cimahi",
+      "jarak_km": 610
+    },
+    {
+      "nama": "Depok",
+      "jarak_km": 490
+    }
+  ],
+  "Jawa Tengah": [
+    {
+      "nama": "Semarang",
+      "jarak_km": 900
+    },
+    {
+      "nama": "Surakarta",
+      "jarak_km": 950
+    },
+    {
+      "nama": "Magelang",
+      "jarak_km": 930
+    }
+  ],
+  "DI Yogyakarta": [
+    {
+      "nama": "Yogyakarta",
+      "jarak_km": 980
+    },
+    {
+      "nama": "Sleman",
+      "jarak_km": 985
+    },
+    {
+      "nama": "Bantul",
+      "jarak_km": 990
+    }
+  ],
+  "Jawa Timur": [
+    {
+      "nama": "Surabaya",
+      "jarak_km": 1150
+    },
+    {
+      "nama": "Malang",
+      "jarak_km": 1200
+    },
+    {
+      "nama": "Kediri",
+      "jarak_km": 1250
+    },
+    {
+      "nama": "Blitar",
+      "jarak_km": 1270
+    }
+  ],
+  "Bali": [
+    {
+      "nama": "Denpasar",
+      "jarak_km": 1500
+    }
+  ],
+  "NTB": [
+    {
+      "nama": "Mataram",
+      "jarak_km": 1700
+    },
+    {
+      "nama": "Bima",
+      "jarak_km": 2000
+    }
+  ],
+  "NTT": [
+    {
+      "nama": "Kupang",
+      "jarak_km": 2500
+    }
+  ],
+  "Kalimantan Barat": [
+    {
+      "nama": "Pontianak",
+      "jarak_km": 1900
+    },
+    {
+      "nama": "Singkawang",
+      "jarak_km": 1950
+    }
+  ],
+  "Kalimantan Tengah": [
+    {
+      "nama": "Palangka Raya",
+      "jarak_km": 2200
+    }
+  ],
+  "Kalimantan Selatan": [
+    {
+      "nama": "Banjarmasin",
+      "jarak_km": 1800
+    },
+    {
+      "nama": "Banjarbaru",
+      "jarak_km": 1810
+    }
+  ],
+  "Kalimantan Timur": [
+    {
+      "nama": "Samarinda",
+      "jarak_km": 2400
+    },
+    {
+      "nama": "Balikpapan",
+      "jarak_km": 2350
+    }
+  ],
+  "Kalimantan Utara": [
+    {
+      "nama": "Tarakan",
+      "jarak_km": 2600
+    }
+  ],
+  "Sulawesi Utara": [
+    {
+      "nama": "Manado",
+      "jarak_km": 2700
+    },
+    {
+      "nama": "Bitung",
+      "jarak_km": 2750
+    },
+    {
+      "nama": "Tomohon",
+      "jarak_km": 2720
+    }
+  ],
+  "Sulawesi Tengah": [
+    {
+      "nama": "Palu",
+      "jarak_km": 2500
+    }
+  ],
+  "Sulawesi Selatan": [
+    {
+      "nama": "Makassar",
+      "jarak_km": 2300
+    },
+    {
+      "nama": "Parepare",
+      "jarak_km": 2350
+    },
+    {
+      "nama": "Palopo",
+      "jarak_km": 2380
+    }
+  ],
+  "Sulawesi Tenggara": [
+    {
+      "nama": "Kendari",
+      "jarak_km": 2550
+    },
+    {
+      "nama": "Baubau",
+      "jarak_km": 2600
+    }
+  ],
+  "Gorontalo": [
+    {
+      "nama": "Gorontalo",
+      "jarak_km": 2680
+    }
+  ],
+  "Maluku": [
+    {
+      "nama": "Ambon",
+      "jarak_km": 3000
+    }
+  ],
+  "Maluku Utara": [
+    {
+      "nama": "Ternate",
+      "jarak_km": 3100
+    },
+    {
+      "nama": "Tidore Kepulauan",
+      "jarak_km": 3120
+    }
+  ],
+  "Papua": [
+    {
+      "nama": "Jayapura",
+      "jarak_km": 4000
+    }
+  ],
+  "Papua Barat": [
+    {
+      "nama": "Manokwari",
+      "jarak_km": 3900
+    },
+    {
+      "nama": "Sorong",
+      "jarak_km": 3950
+    }
+  ]
+}

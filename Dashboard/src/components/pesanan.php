@@ -1,3 +1,16 @@
+<?php 
+$allorder = getAllOrderDetails(); 
+
+$detailModalContent = "";
+
+$detailOrder = null;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["lihat_order"])) {
+    $id = (int) $_POST["lihat_order"];
+    $detailOrder = getOrderDetailById($id);
+}
+
+?>
 <div class="container-fluid">
     <div class="p-3">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -18,14 +31,6 @@
                 <a class="text-decoration-none link-danger" href="#">Delivered<span class="text-dark-emphasis ps-2">(120)</span></a>
                 <a class="text-decoration-none link-danger" href="#">Completed<span class="text-dark-emphasis ps-2">(120)</span></a>
             </div>
-            <div class="dropdown ms-auto">
-                    <a href="#" class="btn btn-outline-danger  icon-link ps-3 pe-3 dropdown-toggle fw-light" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-sliders me-1"></i> Filter</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item fw-light">Paling Sesuai</a></li>
-                        <li><a class="dropdown-item fw-light" href="#">Harga Tertinggi</a></li>
-                        <li><a class="dropdown-item fw-light" href="#">Harga Terendah</a></li>
-                    </ul>
-            </div>
         </div>
     </div>
 </div>
@@ -41,37 +46,104 @@
         </tr>
     </thead>
     <tbody>
+        <?php foreach ($allorder as $order): ?>
         <tr>
-            
-            <td scope="row">12OB3</td>
+            <td scope="row"><?= $order["order_id"] ?></td>
             <td>
                 <div class="imgp-dash rounded">
-                    <img src="/src/images/singkong.png" alt="">
+                    <img src="/src/images/<?= $order["image_product"] ?>" alt="">
                 </div>
             </td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Rp. 999.000</td>
+            <td><?= $order["productname"] ?></td>
+            <td><?= $order["quantity"] ?></td>
+            <td>Rp. <?= $order["total_payment"] ?></td>
             <td>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#detpesan"><i class="fa-solid fa-eye"></i></button>
+                <form method="post">
+                    <input type="hidden" name="lihat_order" value="<?= $order["order_id"] ?>">
+                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-eye"></i></button>
+                </form>
             </td>
         <tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
-<div class="modal fade" id="detpesan" tabindex="-1" aria-labelledby="detpesan" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="detpesan">Detail Pesanan</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger">Save changes</button>
-      </div>
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST["konfirmasi_order"])) {
+        $orderId = (int) $_POST["order_id_update"];
+        updateOrderStatus($orderId, 'Confirmed');
+    }
+
+    if (isset($_POST["kirim_order"])) {
+        $orderId = (int) $_POST["order_id_update"];
+        updateOrderStatus($orderId, 'Dikirim');
+    }
+}
+
+if ($detailOrder && !isset($detailOrder['error'])): 
+?>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var myModal = new bootstrap.Modal(document.getElementById('detorder'));
+    myModal.show();
+});
+</script>
+
+<div class="modal fade" id="detorder" tabindex="-1" aria-labelledby="detorderLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Detail Pesanan</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>ID Pesanan:</strong> <?= $detailOrder[0]['order_id'] ?></p>
+                <p><strong>Nama Penerima:</strong> <?= $detailOrder[0]['buyer_name'] ?></p>
+                <p><strong>Status:</strong> <?= $detailOrder[0]['order_status'] ?></p>
+                <p><strong>Alamat Pengiriman:</strong> <?= $detailOrder[0]['shipping_address'] ?></p>
+                <p><strong>Tanggal Order:</strong> <?= $detailOrder[0]['created_at'] ?></p>
+
+                <hr>
+                <h6>Daftar Produk:</h6>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Gambar</th>
+                            <th>Nama Produk</th>
+                            <th>Kuantitas</th>
+                            <th>Harga</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($detailOrder as $item): ?>
+                        <tr>
+                            <td><img src="/src/images/<?= htmlspecialchars($item["image_product"]) ?>" width="60"></td>
+                            <td><?= htmlspecialchars($item["productname"]) ?></td>
+                            <td><?= $item["quantity"] ?></td>
+                            <td>Rp <?= number_format($item["price"], 0, ',', '.') ?></td>
+                            <td>Rp <?= number_format($item["price"] * $item["quantity"], 0, ',', '.') ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <p><strong>Total Pembayaran:</strong> Rp <?= number_format($detailOrder[0]['total_payment'], 0, ',', '.') ?></p>
+            </div>
+            <div class="modal-footer">
+                <form method="post" class="d-flex gap-2">
+                    <input type="hidden" name="order_id_update" value="<?= $detailOrder[0]['order_id'] ?>">
+                    <?php if ($detailOrder[0]['order_status'] !== 'Confirmed'): ?>
+                        <button type="submit" name="konfirmasi_order" class="btn btn-success">Konfirmasi</button>
+                    <?php endif; ?>
+
+                    <?php if ($detailOrder[0]['order_status'] !== 'Shipped' && $detailOrder[0]['order_status'] !== 'Completed'): ?>
+                        <button type="submit" name="kirim_order" class="btn btn-primary">Kirim</button>
+                    <?php endif; ?>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+<?php elseif ($detailOrder && isset($detailOrder['error'])): ?>
+    <div class="alert alert-danger mt-3"><?= $detailOrder['error'] ?></div>
+<?php endif; ?>

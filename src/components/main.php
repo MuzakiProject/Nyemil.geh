@@ -26,12 +26,12 @@
                                 <div class="col-lg-6 text-center text-lg-start">
                                     <h5 class="fw-semibold text-danger d-none d-xl-block ">Produk Unggulan</h5>
                                     <h2 class="fw-bold display-5 mt-3">Basreng - Daun Jeruk</h2>
-                                    <h4 class="fw-semibold mt-3 text-danger" >Rp 999.99,9</h4>
+                                    <h4 class="fw-semibold mt-3 text-danger" >Rp 11.000,00</h4>
                                     <p class=" mt-3  fw-light">
-                                        Learn more about our product. You can see our product here, click to see more detail about our product. Discover the remarkable features and benefits of our outstanding product.
+                                        Bayangkan kerenyahan basreng yang pecah di mulut, diikuti dengan rasa pedas yang menggigit namun tetap nikmat, dan sentuhan aroma segar daun jeruk yang membangkitkan semangat. Itulah sensasi yang akan kamu dapatkan dari Basreng Pedas - Daun Jeruk kami.
                                     </p>
                                     <div class="d-flex  flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mt-4">
-                                        <a href="?page=5" class="btn btn-danger fw-semibold">Beli Sekarang</a>
+                                        <a href="?page=5&id=2" class="btn btn-danger fw-semibold">Beli Sekarang</a>
                                         <a href="?page=1" class="btn btn-outline-danger fw-semibold">Lihat Semua Produk</a>
                                     </div>
                                 </div>
@@ -47,12 +47,12 @@
                                 <div class="col-lg-6 text-center text-lg-start">
                                     <h5 class="fw-semibold text-danger d-none d-xl-block ">Produk Unggulan</h5>
                                     <h2 class="fw-bold display-5 mt-3">Keripik Pisang - Coklat</h2>
-                                    <h4 class="fw-semibold mt-3 text-danger" >Rp 999.99,9</h4>
+                                    <h4 class="fw-semibold mt-3 text-danger" >Rp 15.000,00</h4>
                                     <p class=" mt-3  fw-light">
-                                        Learn more about our product. You can see our product here, click to see more detail about our product. Discover the remarkable features and benefits of our outstanding product.
+                                        Bayangkan kerenyahan keripik pisang yang bertemu dengan kelembutan dan manisnya cokelat yang meleleh di lidah. Itulah yang akan kamu rasakan dari Keripik Pisang - Coklat kami. Lebih dari sekadar camilan, ini adalah perpaduan sempurna antara buah dan cokelat yang bikin harimu makin manis!
                                     </p>
                                     <div class="d-flex  flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mt-4">
-                                        <a href="#" class="btn btn-danger fw-semibold">Beli Sekarang</a>
+                                        <a href="?page=5&id=7" class="btn btn-danger fw-semibold">Beli Sekarang</a>
                                         <a href="?page=1" class="btn btn-outline-danger fw-semibold">Lihat Semua Produk</a>
                                     </div>
                                 </div>
@@ -68,12 +68,12 @@
                                 <div class="col-lg-6 text-center text-lg-start">
                                     <h5 class="fw-semibold text-danger d-none d-xl-block ">Produk Unggulan</h5>
                                     <h2 class="fw-bold display-5 mt-3">Keripik Singkong - Balado</h2>
-                                    <h4 class="fw-semibold mt-3 text-danger" >Rp 999.99,9</h4>
+                                    <h4 class="fw-semibold mt-3 text-danger" >Rp 11.000,00</h4>
                                     <p class=" mt-3  fw-light">
-                                        Learn more about our product. You can see our product here, click to see more detail about our product. Discover the remarkable features and benefits of our outstanding product.
+                                        Manjakan lidahmu dengan Keripik Singkong - Balado! Keripik singkong tipis yang renyah berpadu sempurna dengan balutan bumbu balado merah merona yang pedas, manis, dan gurih.
                                     </p>
                                     <div class="d-flex  flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mt-4">
-                                        <a href="#" class="btn btn-danger fw-semibold">Beli Sekarang</a>
+                                        <a href="?page=5&id=5" class="btn btn-danger fw-semibold">Beli Sekarang</a>
                                         <a href="?page=1" class="btn btn-outline-danger fw-semibold">Lihat Semua Produk</a>
                                     </div>
                                 </div>

@@ -23,6 +23,6 @@
     </a>
   </div>
   <div class="pb-3">
-    <a href="/index.php" class="btn btn-outline-danger border-0 text-start w-100"><i class="fa-solid fa-person-to-door ms-2"></i> Keluar</a>
+    <a href="/Dashboard/src/components/phplogic/logout.php" class="btn btn-outline-danger border-0 text-start w-100"><i class="fa-solid fa-person-to-door ms-2"></i> Keluar</a>
   </div>
 </aside>

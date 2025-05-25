@@ -17,26 +17,25 @@
         <div class="right w-75 d-flex flex-column justify-content-center align-items-center">
             <h1 class="navbar-brand fw-bold icon-link mb-4"><i class="fa-duotone fa-solid fa-utensils text-danger"></i>Nyemil.geh</h1>
             <h3>Masuk dan Awasi Segalanya.</h3>
-            <form class="w-50 py-5" id="regisdaft">
+            <form action="a.php" class="w-50 py-5" id="regisdaft" method="post">
                 <div class="form-floating mb-4">
-                    <input type="text" class="form-control form-control-sm rounded-3" id="floatingInput" id="username" placeholder="Masukan Nama" require>
+                    <input type="text" class="form-control form-control-sm rounded-3" id="floatingInput" name="username"  placeholder="Masukan Nama" required>
                     <label for="floatingInput">Username</label>
                 </div>
                 <div class="form-floating mb-4">
-                    <input type="password" class="form-control form-control-sm rounded-3" id="floatingPassword" placeholder="Password" require>
+                    <input type="password" class="form-control form-control-sm rounded-3" name="password" id="floatingPassword" placeholder="Password" required>
                     <label for="floatingPassword">Password</label>
                 </div>
                 <div class="form-text mb-4 text-center">
                     Pastikan <span  class="link-danger text-decoration-none">Username</span> dan <span class="link-danger text-decoration-none">Password</span> sudah sesuai.
                 </div>
-                <button type="submit" class="btn btn-danger fw-semibold rounded-0 w-100" id="subkir" disabled>Masuk</button>
+                <button type="submit" class="btn btn-danger fw-semibold rounded-0 w-100" id="subkir">Masuk</button>
             </form>
         </div>
     </div>
 </div>
 
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="/src/components/js/disbtn.js"></script>
 <script>
     ScrollReveal().reveal('.right', {
         duration: 1000,
