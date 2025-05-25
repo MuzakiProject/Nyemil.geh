@@ -43,11 +43,5 @@
             <td>@fat</td>
             <td>080808</td>
         </tr>
-        <tr>
-            <td scope="row">3</td>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td>080808</td>
-        </tr>
     </tbody>
     </table>
