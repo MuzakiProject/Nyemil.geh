@@ -16,7 +16,7 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
+                         Langkah pertama dalam pemesanan adalah melihat produk yang diinginkan. Selanjutnya, pengguna dapat memilih untuk memasukkan produk ke keranjang atau langsung menekan tombol "Beli". Jika memilih "Beli", pengguna akan melanjutkan ke pilihan metode pengiriman dan pembayaran, lalu menyelesaikan pesanan.
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
+                        Terdapat dua cara untuk mendaftar akun. Pertama, dengan mengisi email, username, password, dan no.telpon lalu mengklik tombol "Daftar Sekarang". Kedua, dengan memilih opsi "Masuk dengan Google" untuk mendaftar secara otomatis menggunakan akun Google.
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+                        Produk ini dipastikan halal. Hal ini dibuktikan melalui sertifikasi resmi dan penggunaan bahan-bahan yang sesuai dengan standar kehalalan, sehingga aman digunakan oleh konsumen Muslim.
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 </h2>
                 <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
+                       Pengemasan produk dilakukan dengan aman dan rapi menggunakan bahan pelindung yang sesuai, sehingga produk tetap utuh dan tidak rusak selama proses pengiriman.
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                 </h2>
                 <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
+                       Tersedia beberapa metode pembayaran yang dapat dipilih, antara lain transfer bank, e-wallet (seperti OVO, DANA, dan GoPay), kartu kredit atau debit, serta pembayaran di Mini Market terdekat jika layanan tersebut tersedia di wilayah Anda.
                     </div>
                 </div>
             </div>

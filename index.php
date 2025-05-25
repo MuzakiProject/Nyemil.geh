@@ -66,7 +66,7 @@
             if ($is_logged_in) {
                 include __DIR__ . "/src/components/headerlog.php";
             } else {
-                include __DIR__ . "/src/components/headerlog.php";
+                include __DIR__ . "/src/components/header.php";
             }
             footer($footer);
         ?>
