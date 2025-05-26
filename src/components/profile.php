@@ -280,66 +280,6 @@ $jsonOrders = json_encode($orders);
     </div>
 </div>
 <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<<<<<<< HEAD
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Info Lengkap</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-3">
-            <div class="d-flex gap-3">
-                <div class="left">
-                    <p>Nama</p>
-                    <p>Email</p>
-                    <p>Nomor Telepon</p>
-                    <p>Alamat</p>
-                </div>
-                <div class="middle">
-                    <p>: </p>
-                    <p>: </p>
-                    <p>: </p>
-                    <p>: </p>
-                </div>
-                <div class="right">
-                    <p>
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo ($_SESSION['user']['name']);
-                        }else{
-                            echo "guest";
-                        }
-                    ?>
-                    </p>
-                    <p>
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo ($_SESSION['user']['email']);
-                        }else{
-                            echo "guest@example.com";
-                        }
-                    ?>
-                    </p>
-                    <p>
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo ($_SESSION['user']['address']);
-                        }else{
-                            echo "-";
-                        }
-                    ?>
-                    </p>
-                    <p>
-                        <?php
-                        if (isset($_SESSION['user'])) {
-                            echo ($_SESSION['user']['no_telp']);
-                        }else{
-                            echo "-";
-                        }
-                    ?>
-                    </p>
-                </div>
-=======
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -397,7 +337,6 @@ $jsonOrders = json_encode($orders);
                     }
                 ?>
                 </p>
->>>>>>> 0dac60e069ab6bba053d4e0dfa3992bb63bb0a04
             </div>
         </div>
         </div>

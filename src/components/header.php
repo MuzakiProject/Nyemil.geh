@@ -136,12 +136,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           <div class="text-center mb-3">
             Belum memiliki akun? <a class="text-decoration-none link-danger" href="/registpage.php">Daftar</a>
           </div>
-          <div class="form-text d-flex align-items-center mb-3">
-            <div class="divline"></div>
-            <span class="ps-3 pe-3"> atau </span>
-            <div class="divline"></div>
-          </div>
-          <button type="button" class="btn btn-outline-danger w-100 mb-3 align-items-center d-flex justify-content-center gap-2"><i class="fa-brands fa-google fs-5"></i> Login dengan Google</button>
         </div>
       </div>
     </div>

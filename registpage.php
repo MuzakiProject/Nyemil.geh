@@ -27,8 +27,6 @@
 ?>
 <div class="register-cover ">
     <div class="d-flex w-100 vh-100">
-        <div class="left d-none d-lg-block w-25 bg-danger">
-        </div>
         <div class="right w-100 w-lg-75 d-flex flex-column justify-content-center align-items-center">
             <a class="text-dark" href="index.php"><h1 class="navbar-brand fw-bold icon-link mb-4"><i class="fa-duotone fa-solid fa-utensils text-danger"></i>Nyemil.geh</h1></a>
             <h3>Daftar dan Nikmati Cemilan Favoritmu!</h3>
@@ -54,14 +52,6 @@
                 </div>
                 <button type="submit" name="daftar" class="btn btn-danger fw-semibold rounded-0 w-100" id="subkir" disabled>Register Sekarang</button>
             </form>
-            <div class="d-flex justify-content-center flex-column loginbtn w-50">
-                <div class="form-text d-flex align-items-center mt-3 mb-3">
-                    <div class="divline"></div>
-                    <span class="ps-3 pe-3"> atau </span>
-                    <div class="divline"></div>
-                </div>
-                <button type="button" class="btn btn-outline-danger w-100 mb-3 align-items-center d-flex justify-content-center gap-2 rounded-0"><i class="fa-brands fa-google fs-5"></i> Daftar dengan Google</button>
-            </div>
         </div>
     </div>
 </div>
