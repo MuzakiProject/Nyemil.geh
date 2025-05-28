@@ -244,10 +244,10 @@ function getOrdersByUser($user_id) {
             WHERE o.user_id = ?
             ORDER BY o.created_at DESC";
 
-    $stmt = $dat4bas3->prepare($sql);
-    $stmt->bind_param("i", $user_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $query = $dat4bas3->prepare($sql);
+    $query->bind_param("i", $user_id);
+    $query->execute();
+    $result = $query->get_result();
 
     $orders = [];
     while ($row = $result->fetch_assoc()) {
@@ -259,7 +259,7 @@ function getOrdersByUser($user_id) {
 function getOrderDetail($order_id) {
     global $dat4bas3;
 
-    $stmt = $dat4bas3->prepare("
+    $query = $dat4bas3->prepare("
         SELECT 
             o.id AS order_id,
             o.user_id,
@@ -290,25 +290,24 @@ function getOrderDetail($order_id) {
         WHERE o.id = ?
     ");
 
-    if (!$stmt) {
-        die("Prepare failed: " . $dat4bas3->error); // Ini bantu debug kalau ada masalah SQL
+    if (!$query) {
+        die("Prepare failed: " . $dat4bas3->error);
     }
 
-    $stmt->bind_param("i", $order_id);
-    $stmt->execute();
+    $query->bind_param("i", $order_id);
+    $query->execute();
 
-    return $stmt->get_result();
+    return $query->get_result();
 }
 
 function markOrderAsCompleted($order_id) {
     global $dat4bas3;
 
-    // Optional: validasi bahwa status sebelumnya harus "Dikirim"
-    $stmt = $dat4bas3->prepare("UPDATE orders SET status = 'Selesai' WHERE id = ? AND status = 'Dikirim'");
-    $stmt->bind_param("i", $order_id);
-    $stmt->execute();
+    $query = $dat4bas3->prepare("UPDATE orders SET status = 'Selesai' WHERE id = ? AND status = 'Dikirim'");
+    $query->bind_param("i", $order_id);
+    $query->execute();
 
-    return $stmt->affected_rows > 0;
+    return $query->affected_rows > 0;
 }
 
 ?>
